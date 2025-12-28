@@ -15,6 +15,7 @@
     <ProjectReference Include="..\..\..\..\..\..\..\ue_egine\UE_5.6\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj"><Private>false</Private></ProjectReference>
   </ItemGroup>
   <ItemGroup>
+  <Compile Include="..\..\..\..\Plugins\ActionShooterGame\Source\ActionShooterGame\ActionShooterGame.Build.cs"><Link>Plugins\ActionShooterGame\Source\ActionShooterGame\ActionShooterGame.Build.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\AAGTemplate.Target.cs"><Link>Source\AAGTemplate.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\AAGTemplateEditor.Target.cs"><Link>Source\AAGTemplateEditor.Target.cs</Link></Compile>
   <Compile Include="..\..\..\..\Source\AAGTemplate\AAGTemplate.Build.cs"><Link>Source\AAGTemplate\AAGTemplate.Build.cs</Link></Compile>

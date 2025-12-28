@@ -1,6 +1,7 @@
 {
 	"SourceFiles": [
 		"C:\\game_studio\\ue_5_6_project\\AAGTemplate\\AAGTemplate\\Source\\AAGTemplate\\AAGTemplate.Build.cs",
+		"C:\\game_studio\\ue_5_6_project\\AAGTemplate\\AAGTemplate\\Plugins\\ActionShooterGame\\Source\\ActionShooterGame\\ActionShooterGame.Build.cs",
 		"C:\\game_studio\\ue_5_6_project\\AAGTemplate\\AAGTemplate\\Source\\AAGTemplate.Target.cs",
 		"C:\\game_studio\\ue_5_6_project\\AAGTemplate\\AAGTemplate\\Source\\AAGTemplateEditor.Target.cs"
 	],

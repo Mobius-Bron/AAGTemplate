@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AAGTemplateModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee7905e5c5fa15750185dc55cfe2b3e5c05b713")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e411d04bd3ced03d6ffb65ddb63c8747b692dead")]
 [assembly: System.Reflection.AssemblyProductAttribute("AAGTemplateModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AAGTemplateModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

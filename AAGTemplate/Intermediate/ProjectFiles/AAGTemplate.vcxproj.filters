@@ -11,6 +11,7 @@
     <None Include="..\..\Source\AAGTemplateEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -25,6 +26,42 @@
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ActionShooterGame">
+      <UniqueIdentifier>{5C918B1B-033A-3C70-9F26-F84FFCB2F9EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ActionShooterGame\Source">
+      <UniqueIdentifier>{B12177B6-2018-39DF-9D34-85C10DCF8504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ActionShooterGame\Source\ActionShooterGame">
+      <UniqueIdentifier>{5876792F-5F94-3EC5-9CCF-5BCB172A8D19}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ActionShooterGame\Source\ActionShooterGame\ActionShooterGame.Build.cs">
+      <Filter>Plugins\ActionShooterGame\Source\ActionShooterGame</Filter>
+    </None>
+    <Filter Include="Plugins\ActionShooterGame\Source\ActionShooterGame\Private">
+      <UniqueIdentifier>{457BB642-3175-3FC6-8EDB-84B132A724C3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\ActionShooterGame\Source\ActionShooterGame\Private\ActionShooterGame.cpp">
+      <Filter>Plugins\ActionShooterGame\Source\ActionShooterGame\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\ActionShooterGame\Source\ActionShooterGame\Public">
+      <UniqueIdentifier>{1584020C-5719-3C97-AB65-E3E52ED0D1A3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\ActionShooterGame.h">
+      <Filter>Plugins\ActionShooterGame\Source\ActionShooterGame\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\ActionShooterGame\ActionShooterGame.uplugin">
+      <Filter>Plugins\ActionShooterGame</Filter>
+    </None>
+    <Filter Include="Plugins\ActionShooterGame\Resources">
+      <UniqueIdentifier>{FC392695-FEC4-37A7-9626-EDB27978F1E7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ActionShooterGame\Resources\Icon128.png">
+      <Filter>Plugins\ActionShooterGame\Resources</Filter>
     </None>
     <Filter Include="Source\AAGTemplate">
       <UniqueIdentifier>{48D5C275-F634-3706-B34A-274BFBF91F40}</UniqueIdentifier>

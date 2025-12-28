@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ActionShooterGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Intermediate/Build/Win64/x64/AAGTemplateEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/ActionShooterGame/ActionShooterGame.cpp.obj"
+"C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/ActionShooterGame/PerModuleInline.gen.cpp.obj"
+"C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/ActionShooterGame/Default.rc2.res"
+/OUT:"C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/x64/UnrealEditor/Development/ActionShooterGame/UnrealEditor-ActionShooterGame.lib"
