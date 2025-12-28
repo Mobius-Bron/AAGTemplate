@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ActionShooterGame.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"ActionShooterGame.cpp.obj",
+			"ActionShooterGame.init.gen.cpp.obj",
+			"ASCharacterBase.gen.cpp.obj",
+			"ASControllerBase.gen.cpp.obj",
+			"ASGameModeBase.gen.cpp.obj",
+			"ASInputComponent.gen.cpp.obj",
+			"ASCharacterBase.cpp.obj",
+			"ASInputComponent.cpp.obj",
+			"ASControllerBase.cpp.obj",
+			"ASGameModeBase.cpp.obj"
+		]
+	}
+}

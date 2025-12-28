@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\actionshootergame\\module.actionshootergame.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\intermediate\\build\\win64\\x64\\aagtemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\actionshootergame\\definitions.actionshootergame.h",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\actionshootergame\\permoduleinline.gen.cpp",
+            "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\source\\actionshootergame\\private\\actionshootergame.cpp",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\source\\actionshootergame\\public\\actionshootergame.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

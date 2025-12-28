@@ -1,0 +1,17 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/GameModeBase.h"
+#include "ASGameModeBase.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class ACTIONSHOOTERGAME_API AASGameModeBase : public AGameModeBase
+{
+	GENERATED_BODY()
+	
+};

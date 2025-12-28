@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\unrealeditor\\inc\\actionshootergame\\uht\\dataasset_inputconfig.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\intermediate\\build\\win64\\x64\\aagtemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\actionshootergame\\definitions.actionshootergame.h",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\source\\actionshootergame\\public\\dataassests\\input\\dataasset_inputconfig.h",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\unrealeditor\\inc\\actionshootergame\\uht\\dataasset_inputconfig.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
