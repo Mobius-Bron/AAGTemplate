@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AAGTemplate",
+			"Path": "..\\Source\\AAGTemplate.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AAGTemplateEditor",
+			"Path": "..\\Source\\AAGTemplateEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
