@@ -2,6 +2,7 @@
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/AICombatComponent.gen.cpp"
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASAbilitySystemComponent.gen.cpp"
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASAICharacter.gen.cpp"
+#include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASAIGameplayAbility.gen.cpp"
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASAttributeSet.gen.cpp"
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASControllerBase.gen.cpp"
 #include "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT/ASGameModeBase.gen.cpp"
