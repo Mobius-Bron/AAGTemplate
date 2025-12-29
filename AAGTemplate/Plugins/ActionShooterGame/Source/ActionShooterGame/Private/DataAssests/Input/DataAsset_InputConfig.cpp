@@ -13,5 +13,5 @@ TObjectPtr<UInputAction> UDataAsset_InputConfig::FindNativeInputActionByTag(cons
 		}
 	}
 
-	return nullptr;s
+	return nullptr;
 }

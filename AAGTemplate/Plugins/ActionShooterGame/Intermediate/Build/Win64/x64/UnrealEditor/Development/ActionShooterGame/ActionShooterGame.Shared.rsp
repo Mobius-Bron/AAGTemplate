@@ -1,5 +1,6 @@
 /I "."
 /I "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Source/ActionShooterGame/Private"
+/I "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Intermediate/Build/Win64/UnrealEditor/Inc/ActionShooterGame/UHT"
 /I "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Source"
 /I "C:/game_studio/ue_5_6_project/AAGTemplate/AAGTemplate/Plugins/ActionShooterGame/Source/ActionShooterGame/Public"
 /I "Runtime/Core/Public"

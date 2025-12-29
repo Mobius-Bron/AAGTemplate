@@ -4,26 +4,42 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
+#include "Interfaces/PawnUiInterface.h"
 #include "ASCharacterBase.generated.h"
 
+class UASAbilitySystemComponent;
+class UASAttributeSet;
+
 UCLASS()
-class ACTIONSHOOTERGAME_API AASCharacterBase : public ACharacter
+class ACTIONSHOOTERGAME_API AASCharacterBase :
+	public ACharacter,
+	public IAbilitySystemInterface,
+	public IPawnUiInterface
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
 	AASCharacterBase();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	//~ Begin IPawnUiInterface
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	//~ End IPawnUiInterface
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	//~ Begin IPawnUiInterface
+	
+	//~ End IPawnUiInterface
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
+	TObjectPtr<UASAbilitySystemComponent> CharacterASC;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
+	TObjectPtr<UASAttributeSet> CharacterAttributeSet;
+
+public:
+	FORCEINLINE UASAbilitySystemComponent* GetASAbilitySystemComponent() const { return CharacterASC; }
+
+	FORCEINLINE UASAttributeSet* GetASAttributeSet() const { return CharacterAttributeSet; }
 };

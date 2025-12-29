@@ -2,33 +2,23 @@
 
 
 #include "Character/ASCharacterBase.h"
+#include "AbilitySystem/ASAbilitySystemComponent.h"
+#include "AbilitySystem/ASAttributeSet.h"
 
-// Sets default values
 AASCharacterBase::AASCharacterBase()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bStartWithTickEnabled = false;
 
+	GetMesh()->bReceivesDecals = false;
+
+	CharacterASC = CreateDefaultSubobject<UASAbilitySystemComponent>(TEXT("CharacterASC"));
+
+	CharacterAttributeSet = CreateDefaultSubobject<UASAttributeSet>(TEXT("CharacterAttributeSet"));
 }
 
-// Called when the game starts or when spawned
-void AASCharacterBase::BeginPlay()
+UAbilitySystemComponent* AASCharacterBase::GetAbilitySystemComponent() const
 {
-	Super::BeginPlay();
-	
-}
-
-// Called every frame
-void AASCharacterBase::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void AASCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
+	return GetASAbilitySystemComponent();
 }
 

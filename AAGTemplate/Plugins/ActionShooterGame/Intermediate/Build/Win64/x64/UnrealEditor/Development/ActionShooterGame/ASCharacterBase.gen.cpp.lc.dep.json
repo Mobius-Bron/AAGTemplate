@@ -16,6 +16,10 @@
             "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "c:\\game_studio\\ue_egine\\ue_5.6\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\source\\actionshootergame\\public\\interfaces\\pawnuiinterface.h",
+            "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\unrealeditor\\inc\\actionshootergame\\uht\\pawnuiinterface.generated.h",
             "c:\\game_studio\\ue_5_6_project\\aagtemplate\\aagtemplate\\plugins\\actionshootergame\\intermediate\\build\\win64\\unrealeditor\\inc\\actionshootergame\\uht\\ascharacterbase.generated.h"
         ],
         "ImportedModules": [],
