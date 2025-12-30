@@ -2,19 +2,24 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ActionShooterGame.cpp.obj": [
-			"ActionShooterGame.init.gen.cpp.obj",
 			"AICombatComponent.gen.cpp.obj",
 			"ASAbilitySystemComponent.gen.cpp.obj",
 			"ASAICharacter.gen.cpp.obj",
 			"ASAIGameplayAbility.gen.cpp.obj",
 			"ASAttributeSet.gen.cpp.obj",
+			"ASBaseAnimInstance.gen.cpp.obj",
+			"ASCharacterAnimInstance.gen.cpp.obj",
 			"ASCharacterBase.gen.cpp.obj",
 			"ASControllerBase.gen.cpp.obj",
+			"ASEnumType.gen.cpp.obj",
 			"ASGameModeBase.gen.cpp.obj",
 			"ASGameplayAbility.gen.cpp.obj",
 			"ASInputComponent.gen.cpp.obj",
+			"ASPlayerAnimInstance.gen.cpp.obj",
 			"ASPlayerCharacter.gen.cpp.obj",
 			"ASPlayerGameplayAbility.gen.cpp.obj",
+			"ASPlayerLinkedAnimLayer.gen.cpp.obj",
+			"ASStructType.gen.cpp.obj",
 			"DataAsset_InputConfig.gen.cpp.obj",
 			"PawnCombatComponent.gen.cpp.obj",
 			"PawnCombatInterface.gen.cpp.obj",
@@ -44,7 +49,14 @@
 			"ASGameModeBase.cpp.obj",
 			"PawnCombatInterface.cpp.obj",
 			"PawnInventoryInterface.cpp.obj",
-			"PawnUiInterface.cpp.obj"
+			"PawnUiInterface.cpp.obj",
+			"ActionShooterGame.init.gen.cpp.obj",
+			"ASBaseAnimInstance.cpp.obj",
+			"ASCharacterAnimInstance.cpp.obj",
+			"ASPlayerAnimInstance.cpp.obj",
+			"ASPlayerLinkedAnimLayer.cpp.obj",
+			"ASEnumType.cpp.obj",
+			"ASStructType.cpp.obj"
 		]
 	}
 }
