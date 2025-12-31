@@ -16,6 +16,7 @@ ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_AASCharacterBase();
 ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_AASCharacterBase_NoRegister();
 ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_UASAbilitySystemComponent_NoRegister();
 ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_UASAttributeSet_NoRegister();
+ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_UDataAsset_StartUpBase_NoRegister();
 ACTIONSHOOTERGAME_API UClass* Z_Construct_UClass_UPawnUiInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
@@ -73,9 +74,14 @@ struct Z_Construct_UClass_AASCharacterBase_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Character/ASCharacterBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CharacterStartUpData_MetaData[] = {
+		{ "Category", "CharacterData" },
+		{ "ModuleRelativePath", "Public/Character/ASCharacterBase.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterASC;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterAttributeSet;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_CharacterStartUpData;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -86,9 +92,11 @@ struct Z_Construct_UClass_AASCharacterBase_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterASC = { "CharacterASC", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AASCharacterBase, CharacterASC), Z_Construct_UClass_UASAbilitySystemComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterASC_MetaData), NewProp_CharacterASC_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterAttributeSet = { "CharacterAttributeSet", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AASCharacterBase, CharacterAttributeSet), Z_Construct_UClass_UASAttributeSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterAttributeSet_MetaData), NewProp_CharacterAttributeSet_MetaData) };
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterStartUpData = { "CharacterStartUpData", nullptr, (EPropertyFlags)0x0024080000010015, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AASCharacterBase, CharacterStartUpData), Z_Construct_UClass_UDataAsset_StartUpBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CharacterStartUpData_MetaData), NewProp_CharacterStartUpData_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AASCharacterBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterASC,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterAttributeSet,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AASCharacterBase_Statics::NewProp_CharacterStartUpData,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AASCharacterBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AASCharacterBase_Statics::DependentSingletons[])() = {
@@ -131,10 +139,10 @@ AASCharacterBase::~AASCharacterBase() {}
 struct Z_CompiledInDeferFile_FID_ue_5_6_project_AAGTemplate_AAGTemplate_Plugins_ActionShooterGame_Source_ActionShooterGame_Public_Character_ASCharacterBase_h__Script_ActionShooterGame_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AASCharacterBase, AASCharacterBase::StaticClass, TEXT("AASCharacterBase"), &Z_Registration_Info_UClass_AASCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AASCharacterBase), 3523024668U) },
+		{ Z_Construct_UClass_AASCharacterBase, AASCharacterBase::StaticClass, TEXT("AASCharacterBase"), &Z_Registration_Info_UClass_AASCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AASCharacterBase), 3789118886U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ue_5_6_project_AAGTemplate_AAGTemplate_Plugins_ActionShooterGame_Source_ActionShooterGame_Public_Character_ASCharacterBase_h__Script_ActionShooterGame_3157712398(TEXT("/Script/ActionShooterGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ue_5_6_project_AAGTemplate_AAGTemplate_Plugins_ActionShooterGame_Source_ActionShooterGame_Public_Character_ASCharacterBase_h__Script_ActionShooterGame_3056837646(TEXT("/Script/ActionShooterGame"),
 	Z_CompiledInDeferFile_FID_ue_5_6_project_AAGTemplate_AAGTemplate_Plugins_ActionShooterGame_Source_ActionShooterGame_Public_Character_ASCharacterBase_h__Script_ActionShooterGame_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ue_5_6_project_AAGTemplate_AAGTemplate_Plugins_ActionShooterGame_Source_ActionShooterGame_Public_Character_ASCharacterBase_h__Script_ActionShooterGame_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

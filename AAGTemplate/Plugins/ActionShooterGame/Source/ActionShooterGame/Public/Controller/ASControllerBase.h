@@ -16,4 +16,6 @@ class ACTIONSHOOTERGAME_API AASControllerBase : public APlayerController
 	
 public:
 	AASControllerBase();
+
+
 };

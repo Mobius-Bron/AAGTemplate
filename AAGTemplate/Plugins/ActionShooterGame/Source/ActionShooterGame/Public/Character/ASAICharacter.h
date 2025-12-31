@@ -14,4 +14,11 @@ class ACTIONSHOOTERGAME_API AASAICharacter : public AASCharacterBase
 {
 	GENERATED_BODY()
 	
+public:
+	AASAICharacter();
+
+protected:
+	//~ Begin APawn Interface.
+	virtual void BeginPlay() override;
+	//~ End APawn Interface
 };

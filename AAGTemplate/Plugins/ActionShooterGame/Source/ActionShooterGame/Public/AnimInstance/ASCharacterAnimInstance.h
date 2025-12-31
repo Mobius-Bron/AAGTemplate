@@ -160,8 +160,5 @@ protected:
 	void UpdateJumpFallData();
 
 	UFUNCTION(BlueprintCallable, meta = (BlueprintThreadSafe))
-	void SelectCardinalDirection(float Angle, float DeadDone, EAnimEnum_CardinalDirection CurrentDirection, bool UseCurrentDirection);
-
-private:
-	float CustomCalculateDirection(const FVector& Velocity, const FRotator& BaseRotation);
+	void SelectCardinalDirection(float Angle, float DeadDone, EAnimEnum_CardinalDirection& CurrentDirection, bool UseCurrentDirection);
 };

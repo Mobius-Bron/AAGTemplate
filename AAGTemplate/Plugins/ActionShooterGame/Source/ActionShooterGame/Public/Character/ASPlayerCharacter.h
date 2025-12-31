@@ -4,10 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Character/ASCharacterBase.h"
+#include "AbilitySystemInterface.h"
 #include "ASPlayerCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
+class UDataAsset_InputConfig;
+struct FInputActionValue;
+struct FGameplayTag;
 
 /**
  * 
@@ -19,6 +23,14 @@ class ACTIONSHOOTERGAME_API AASPlayerCharacter : public AASCharacterBase
 	
 public:
 	AASPlayerCharacter();
+
+	virtual void BeginPlay() override;
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+	//~ Begin APawn Interface.
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
+	//~ End APawn Interface
 
 private:
 
@@ -35,4 +47,16 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ui", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UPlayerUiComponent> HeroUiComponent;*/
 #pragma endregion
+
+#pragma region Inputs
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UDataAsset_InputConfig> InputConfigDataAsset;
+
+	void Input_Move(const FInputActionValue& InputActionValue);
+	void Input_Look(const FInputActionValue& InputActionValue);
+
+	void Input_AbilityInputPressed(FGameplayTag InInputTag);
+	void Input_AbilityInputReleased(FGameplayTag InInputTag);
+#pragma endregion
+
 };

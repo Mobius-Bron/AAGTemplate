@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include "Interfaces/PawnUiInterface.h"
+#include "DataAssests/StartUp/DataAsset_StartUpBase.h"
 #include "ASCharacterBase.generated.h"
 
 class UASAbilitySystemComponent;
@@ -37,6 +38,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	TObjectPtr<UASAttributeSet> CharacterAttributeSet;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
+	TSoftObjectPtr<UDataAsset_StartUpBase> CharacterStartUpData;
 
 public:
 	FORCEINLINE UASAbilitySystemComponent* GetASAbilitySystemComponent() const { return CharacterASC; }

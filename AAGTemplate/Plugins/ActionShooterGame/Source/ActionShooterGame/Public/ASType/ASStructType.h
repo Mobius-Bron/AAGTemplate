@@ -8,12 +8,12 @@
 #include "ScalableFloat.h"
 #include "Engine/Texture2DDynamic.h"
 #include "Animation/AnimSequence.h"
+#include "AbilitySystem/Abilities/ASGameplayAbility.h"
 #include "ASStructType.generated.h"
 
 
 class UASPlayerLinkedAnimLayer;
 class UInputMappingContext;
-class UASGameplayAbility;
 struct FGameplayTag;
 
 

@@ -5,5 +5,5 @@
 
 AASControllerBase::AASControllerBase()
 {
-
+	bReplicates = true;
 }

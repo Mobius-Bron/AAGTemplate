@@ -4,6 +4,7 @@
 #include "Character/ASCharacterBase.h"
 #include "AbilitySystem/ASAbilitySystemComponent.h"
 #include "AbilitySystem/ASAttributeSet.h"
+#include "DataAssests/StartUp/DataAsset_StartUpBase.h"
 
 AASCharacterBase::AASCharacterBase()
 {
@@ -11,10 +12,6 @@ AASCharacterBase::AASCharacterBase()
 	PrimaryActorTick.bStartWithTickEnabled = false;
 
 	GetMesh()->bReceivesDecals = false;
-
-	CharacterASC = CreateDefaultSubobject<UASAbilitySystemComponent>(TEXT("CharacterASC"));
-
-	CharacterAttributeSet = CreateDefaultSubobject<UASAttributeSet>(TEXT("CharacterAttributeSet"));
 }
 
 UAbilitySystemComponent* AASCharacterBase::GetAbilitySystemComponent() const

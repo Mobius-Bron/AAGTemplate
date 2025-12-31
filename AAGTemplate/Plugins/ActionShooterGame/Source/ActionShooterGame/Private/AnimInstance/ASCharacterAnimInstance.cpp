@@ -4,6 +4,7 @@
 #include "AnimInstance/ASCharacterAnimInstance.h"
 #include "Character/ASCharacterBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "KismetAnimationLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 
 void UASCharacterAnimInstance::NativeInitializeAnimation()
@@ -108,7 +109,10 @@ void UASCharacterAnimInstance::UpdateVelocityData()
 
 	LocalVelocity2D = WorldRotation.UnrotateVector(WorldVelocity2D);
 
-	LocalVelocityDirectionAngle = ThisClass::CustomCalculateDirection(LocalVelocity2D, WorldRotation);
+	LocalVelocityDirectionAngle = UKismetAnimationLibrary::CalculateDirection(
+		WorldVelocity2D,
+		WorldRotation
+	);
 
 	SelectCardinalDirection(LocalVelocityDirectionAngle, CardinalDirectionDeadZone, LocalVelocityDirection, bWasMoveLastUpdate);
 
@@ -170,7 +174,7 @@ void UASCharacterAnimInstance::UpdateJumpFallData()
 	}
 }
 
-void UASCharacterAnimInstance::SelectCardinalDirection(float Angle, float DeadDone, EAnimEnum_CardinalDirection CurrentDirection, bool UseCurrentDirection)
+void UASCharacterAnimInstance::SelectCardinalDirection(float Angle, float DeadDone, EAnimEnum_CardinalDirection& CurrentDirection, bool UseCurrentDirection)
 {
 	float AbsAngle = abs(Angle);
 
@@ -189,11 +193,11 @@ void UASCharacterAnimInstance::SelectCardinalDirection(float Angle, float DeadDo
 		}
 	}
 
-	if (AbsAngle >= 45.f)
+	if (AbsAngle <= 45.f)
 	{
 		CurrentDirection = EAnimEnum_CardinalDirection::Forward;
 	}
-	else if(AbsAngle <= 135.f)
+	else if(AbsAngle >= 135.f)
 	{
 		CurrentDirection = EAnimEnum_CardinalDirection::Backward;
 	}
@@ -208,31 +212,4 @@ void UASCharacterAnimInstance::SelectCardinalDirection(float Angle, float DeadDo
 			CurrentDirection = EAnimEnum_CardinalDirection::Left;
 		}
 	}
-}
-
-float UASCharacterAnimInstance::CustomCalculateDirection(const FVector& Velocity, const FRotator& BaseRotation)
-{
-	if (!Velocity.IsNearlyZero())
-	{
-		const FMatrix RotMatrix = FRotationMatrix(BaseRotation);
-		const FVector ForwardVector = RotMatrix.GetScaledAxis(EAxis::X);
-		const FVector RightVector = RotMatrix.GetScaledAxis(EAxis::Y);
-		const FVector NormalizedVel = Velocity.GetSafeNormal2D();
-
-		// get a cos(alpha) of forward vector vs velocity
-		const float ForwardCosAngle = static_cast<float>(FVector::DotProduct(ForwardVector, NormalizedVel));
-		// now get the alpha and convert to degree
-		float ForwardDeltaDegree = FMath::RadiansToDegrees(FMath::Acos(ForwardCosAngle));
-
-		// depending on where right vector is, flip it
-		const float RightCosAngle = static_cast<float>(FVector::DotProduct(RightVector, NormalizedVel));
-		if (RightCosAngle < 0.f)
-		{
-			ForwardDeltaDegree *= -1.f;
-		}
-
-		return ForwardDeltaDegree;
-	}
-
-	return 0.f;
 }
