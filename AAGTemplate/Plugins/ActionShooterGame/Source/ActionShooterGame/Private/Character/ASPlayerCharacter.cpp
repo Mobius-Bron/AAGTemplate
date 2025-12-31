@@ -20,6 +20,7 @@
 #include "ASType/ASStructType.h"
 #include "ASType/ASEnumType.h"
 #include "ASGameplayTag.h"
+#include "DebugHelper.h"
 
 AASPlayerCharacter::AASPlayerCharacter()
 {

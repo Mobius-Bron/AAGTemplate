@@ -4,8 +4,8 @@
 #include "DataAssests/StartUp/DataAsset_StartUpBase.h"
 #include "Abilities/GameplayAbility.h"
 #include "AbilitySystem/ASAbilitySystemComponent.h"
-#include "AbilitySystem/Abilities/ASGameplayAbility.h"
 #include "GameplayEffect.h"
+#include "DebugHelper.h"
 
 void UDataAsset_StartUpBase::GiveToASAbilitySystemComponent(UASAbilitySystemComponent* InASASCToGive, int32 ApplyLevel)
 {
@@ -41,6 +41,8 @@ void UDataAsset_StartUpBase::GrantAbilities(const TArray<TSubclassOf<UASGameplay
 	for (const TSubclassOf<UASGameplayAbility>& Ability : InAbilitiesToGive)
 	{
 		if (!Ability) { continue; }
+
+		LogScreen((TEXT("Give %s"), Ability->GetName()), 10.f, FLinearColor::Green);
 
 		FGameplayAbilitySpec AbilitySpec(Ability);
 		AbilitySpec.SourceObject = InASASCToGive->GetAvatarActor();

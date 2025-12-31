@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "AbilitySystem/Abilities/ASGameplayAbility.h"
 #include "DataAsset_StartUpBase.generated.h"
 
 class UASAbilitySystemComponent;
-class UASGameplayAbility;
 class UGameplayEffect;
 
 /**
