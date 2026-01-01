@@ -46,4 +46,5 @@ public:
 	FORCEINLINE UASAbilitySystemComponent* GetASAbilitySystemComponent() const { return CharacterASC; }
 
 	FORCEINLINE UASAttributeSet* GetASAttributeSet() const { return CharacterAttributeSet; }
+
 };

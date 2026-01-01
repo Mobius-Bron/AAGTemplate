@@ -60,6 +60,12 @@ void AASPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	TObjectPtr<UEnhancedInputLocalPlayerSubsystem> InputSubsystems = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer);
 
 	check(InputSubsystems);
+	FString Msg = FString::Printf(
+		TEXT("Setup Player: %s  Input Component: %s"),
+		*LocalPlayer->GetName(),
+		*InputSubsystems->GetName()
+	);
+	LogScreen(Msg, 10.f, FLinearColor::Green);
 
 	InputSubsystems->AddMappingContext(InputConfigDataAsset->DefaultMappingContext, 0);
 
@@ -95,27 +101,16 @@ void AASPlayerCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 
-	AASPlayerState* AactionShooterPlayerState = GetPlayerState<AASPlayerState>();
-	check(AactionShooterPlayerState);
-	AactionShooterPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(AactionShooterPlayerState, this);
-
-	CharacterASC = AactionShooterPlayerState->GetASAbilitySystemComponent();
-	CharacterAttributeSet = AactionShooterPlayerState->GetASAttributeSet();
-
-	if (!CharacterStartUpData.IsNull())
-	{
-		if (UDataAsset_StartUpBase* LoadedData = CharacterStartUpData.LoadSynchronous())
-		{
-			LoadedData->GiveToASAbilitySystemComponent(CharacterASC);
-		}
-	}
+	// 服务器初始化能力系统
+	SetCharacterASCFromPlayerState();
 }
 
 void AASPlayerCharacter::OnRep_PlayerState()
 {
 	Super::OnRep_PlayerState();
 
-
+	// 客户端初始化能力系统
+	SetCharacterASCFromPlayerState();
 }
 
 void AASPlayerCharacter::Input_Move(const FInputActionValue& InputActionValue)
@@ -142,21 +137,49 @@ void AASPlayerCharacter::Input_Look(const FInputActionValue& InputActionValue)
 
 	if (LookAxisVector.X != 0.0f)
 	{
-		AddControllerYawInput(LookAxisVector.X * 2);
+		AddControllerYawInput(LookAxisVector.X * 2.f);
 	}
 
 	if (LookAxisVector.Y != 0.0f)
 	{
-		AddControllerPitchInput(LookAxisVector.Y * 2);
+		AddControllerPitchInput(LookAxisVector.Y * -2.f);
 	}
 }
 
 void AASPlayerCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 {
+	if (!CharacterASC)
+	{
+		LogScreen("No ASC!!!", 2.0f, FLinearColor::Red);
+		return;
+	}
 	CharacterASC->OnAbilityInputPressed(InInputTag);
 }
 
 void AASPlayerCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
 {
+	if (!CharacterASC)
+	{
+		return;
+	}
 	CharacterASC->OnAbilityInputReleased(InInputTag);
+}
+
+void AASPlayerCharacter::SetCharacterASCFromPlayerState()
+{
+	AASPlayerState* AactionShooterPlayerState = GetPlayerState<AASPlayerState>();
+	check(AactionShooterPlayerState);
+
+	AactionShooterPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(AactionShooterPlayerState, this);
+
+	CharacterASC = AactionShooterPlayerState->GetASAbilitySystemComponent();
+	CharacterAttributeSet = AactionShooterPlayerState->GetASAttributeSet();
+
+	if (!CharacterStartUpData.IsNull())
+	{
+		if (UDataAsset_StartUpBase* LoadedData = CharacterStartUpData.LoadSynchronous())
+		{
+			LoadedData->GiveToASAbilitySystemComponent(CharacterASC);
+		}
+	}
 }

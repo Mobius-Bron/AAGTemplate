@@ -59,4 +59,7 @@ private:
 	void Input_AbilityInputReleased(FGameplayTag InInputTag);
 #pragma endregion
 
+private:
+	inline void SetCharacterASCFromPlayerState();
+
 };

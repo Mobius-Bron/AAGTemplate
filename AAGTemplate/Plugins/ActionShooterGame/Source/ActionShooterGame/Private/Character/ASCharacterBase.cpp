@@ -8,6 +8,8 @@
 
 AASCharacterBase::AASCharacterBase()
 {
+	bReplicates = true;
+
 	PrimaryActorTick.bCanEverTick = false;
 	PrimaryActorTick.bStartWithTickEnabled = false;
 

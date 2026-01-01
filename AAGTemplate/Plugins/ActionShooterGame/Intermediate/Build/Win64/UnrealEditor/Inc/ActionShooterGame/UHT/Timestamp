@@ -8,10 +8,10 @@ C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\AnimInstance\Player\ASPlayerAnimInstance.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\AnimInstance\Player\ASPlayerLinkedAnimLayer.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\ASType\ASEnumType.h
-C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\ASType\ASStructType.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Character\ASAICharacter.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Character\ASCharacterBase.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Character\ASPlayerCharacter.h
+C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\ASType\ASStructType.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Component\PawnExtensionComponentBase.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Component\Combat\AICombatComponent.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Component\Combat\PawnCombatComponent.h
@@ -25,7 +25,7 @@ C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\DataAssests\StartUp\DataAsset_StartUpBase.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\DataAssests\StartUp\DataAsset_StartUpPlayer.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\GameMode\ASGameModeBase.h
-C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Interfaces\PawnCombatInterface.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Interfaces\PawnInventoryInterface.h
+C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Interfaces\PawnCombatInterface.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\Interfaces\PawnUiInterface.h
 C:\game_studio\ue_5_6_project\AAGTemplate\AAGTemplate\Plugins\ActionShooterGame\Source\ActionShooterGame\Public\PlayerState\ASPlayerState.h

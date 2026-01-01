@@ -25,6 +25,9 @@ class ACTIONSHOOTERGAME_API UASGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
 
+public:
+	UASGameplayAbility();
+
 protected:
 	//~ Begin UGameplayAbility Interface.
 	virtual void OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;

@@ -7,6 +7,7 @@
 #include "AbilitySystem/Abilities/ASAIGameplayAbility.h"
 #include "AbilitySystem/ASAbilitySystemComponent.h"
 #include "ASType/ASStructType.h"
+#include "DebugHelper.h"
 
 void UDataAsset_StartUpAI::GiveToASAbilitySystemComponent(UASAbilitySystemComponent* InActionASCToGive, int32 ApplyLevel)
 {
@@ -15,6 +16,12 @@ void UDataAsset_StartUpAI::GiveToASAbilitySystemComponent(UASAbilitySystemCompon
 	for (const TSubclassOf<UASGameplayAbility>& AIAbilityToGrant : AIStartUpAbilitySets)
 	{
 		if (!AIAbilityToGrant) continue;
+
+		FString Msg = FString::Printf(
+			TEXT("On Give Player Start Up Data %s"),
+			*AIAbilityToGrant->GetName()
+		);
+		LogScreen(Msg, 10.f, FLinearColor::Red);
 
 		FGameplayAbilitySpec AbilitySpec(AIAbilityToGrant);
 		AbilitySpec.SourceObject = InActionASCToGive->GetAvatarActor();

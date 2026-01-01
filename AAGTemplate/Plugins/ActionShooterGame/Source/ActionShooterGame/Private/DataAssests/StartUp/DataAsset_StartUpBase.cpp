@@ -41,8 +41,12 @@ void UDataAsset_StartUpBase::GrantAbilities(const TArray<TSubclassOf<UASGameplay
 	for (const TSubclassOf<UASGameplayAbility>& Ability : InAbilitiesToGive)
 	{
 		if (!Ability) { continue; }
-
-		LogScreen((TEXT("Give %s"), Ability->GetName()), 10.f, FLinearColor::Green);
+		
+		FString Msg = FString::Printf(
+			TEXT("On Give Base Start Up Data %s"),
+			*Ability->GetName()
+		);
+		LogScreen(Msg, 10.f, FLinearColor::Red);
 
 		FGameplayAbilitySpec AbilitySpec(Ability);
 		AbilitySpec.SourceObject = InASASCToGive->GetAvatarActor();

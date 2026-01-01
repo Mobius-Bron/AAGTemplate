@@ -18,6 +18,10 @@ class ACTIONSHOOTERGAME_API UASAbilitySystemComponent : public UAbilitySystemCom
 	GENERATED_BODY()
 	
 public:
+	UASAbilitySystemComponent();
+
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 	void OnAbilityInputPressed(const FGameplayTag& InInputTag);
 	void OnAbilityInputReleased(const FGameplayTag& InInputTag);
 
