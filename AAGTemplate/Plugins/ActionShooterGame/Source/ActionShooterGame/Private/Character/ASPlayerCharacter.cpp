@@ -60,12 +60,6 @@ void AASPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	TObjectPtr<UEnhancedInputLocalPlayerSubsystem> InputSubsystems = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer);
 
 	check(InputSubsystems);
-	FString Msg = FString::Printf(
-		TEXT("Setup Player: %s  Input Component: %s"),
-		*LocalPlayer->GetName(),
-		*InputSubsystems->GetName()
-	);
-	LogScreen(Msg, 10.f, FLinearColor::Green);
 
 	InputSubsystems->AddMappingContext(InputConfigDataAsset->DefaultMappingContext, 0);
 
@@ -148,20 +142,11 @@ void AASPlayerCharacter::Input_Look(const FInputActionValue& InputActionValue)
 
 void AASPlayerCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 {
-	if (!CharacterASC)
-	{
-		LogScreen("No ASC!!!", 2.0f, FLinearColor::Red);
-		return;
-	}
 	CharacterASC->OnAbilityInputPressed(InInputTag);
 }
 
 void AASPlayerCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
 {
-	if (!CharacterASC)
-	{
-		return;
-	}
 	CharacterASC->OnAbilityInputReleased(InInputTag);
 }
 

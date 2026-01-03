@@ -12,7 +12,7 @@ UASGameplayAbility::UASGameplayAbility()
 	bReplicateInputDirectly = true;
 	
 	// 网络执行策略（最重要！）
-	NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::ServerInitiated;
+	NetExecutionPolicy = EGameplayAbilityNetExecutionPolicy::ServerOnly;
 
 	// 网络执行策略选项：
 	// LocalPredicted - 客户端预测，服务端验证（最常用）
@@ -29,10 +29,6 @@ UASGameplayAbility::UASGameplayAbility()
 
 	// 实例化策略
 	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
-	// 选项：
-	// InstancedPerActor - 每个Actor一个实例（最常用）
-	// InstancedPerExecution - 每次执行一个新实例
-	// NonInstanced - 不实例化（静态）
 }
 
 void UASGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
@@ -50,6 +46,16 @@ void UASGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInf
 		{
 			ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle);
 		}
+	}
+}
+
+void UASGameplayAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
+{
+	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+
+	if (!ActorInfo->IsNetAuthority())
+	{
+		return;
 	}
 }
 

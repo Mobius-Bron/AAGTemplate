@@ -5,5 +5,6 @@
 
 AASControllerBase::AASControllerBase()
 {
-	bReplicates = true;
+	SetReplicates(true);
+	SetNetUpdateFrequency(100.f);
 }

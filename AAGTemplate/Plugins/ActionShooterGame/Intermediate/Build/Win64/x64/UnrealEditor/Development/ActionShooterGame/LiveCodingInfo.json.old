@@ -15,6 +15,7 @@
 			"ASGameModeBase.gen.cpp.obj",
 			"ASGameplayAbility.gen.cpp.obj",
 			"ASInputComponent.gen.cpp.obj",
+			"ASItemBase.gen.cpp.obj",
 			"ASPlayerAnimInstance.gen.cpp.obj",
 			"ASPlayerCharacter.gen.cpp.obj",
 			"ASPlayerGameplayAbility.gen.cpp.obj",
@@ -36,6 +37,7 @@
 			"PerModuleInline.gen.cpp.obj",
 			"ASAIGameplayAbility.cpp.obj",
 			"ASPlayerGameplayAbility.cpp.obj",
+			"ASAbilitySystemComponent.cpp.obj",
 			"ASAttributeSet.cpp.obj",
 			"ActionShooterGame.cpp.obj",
 			"ASBaseAnimInstance.cpp.obj",
@@ -53,9 +55,11 @@
 			"ASInputComponent.cpp.obj",
 			"PawnInventoryComponent.cpp.obj",
 			"PawnExtensionComponentBase.cpp.obj",
-			"ASControllerBase.cpp.obj",
 			"ASThirdPersonController.cpp.obj",
 			"DataAsset_InputConfig.cpp.obj",
+			"DataAsset_StartUpAI.cpp.obj",
+			"DataAsset_StartUpBase.cpp.obj",
+			"DataAsset_StartUpPlayer.cpp.obj",
 			"DebugHelper.cpp.obj",
 			"ASGameModeBase.cpp.obj",
 			"PawnCombatInterface.cpp.obj",
@@ -64,11 +68,9 @@
 			"ASPlayerState.cpp.obj",
 			"ActionShooterGame.init.gen.cpp.obj",
 			"ASGameplayAbility.cpp.obj",
-			"ASAbilitySystemComponent.cpp.obj",
 			"ASPlayerCharacter.cpp.obj",
-			"DataAsset_StartUpAI.cpp.obj",
-			"DataAsset_StartUpBase.cpp.obj",
-			"DataAsset_StartUpPlayer.cpp.obj"
+			"ASControllerBase.cpp.obj",
+			"ASItemBase.cpp.obj"
 		]
 	}
 }

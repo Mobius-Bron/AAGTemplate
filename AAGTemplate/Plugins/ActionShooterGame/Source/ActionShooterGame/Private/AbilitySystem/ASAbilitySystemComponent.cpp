@@ -17,11 +17,6 @@ void UASAbilitySystemComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 
 void UASAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInputTag)
 {
-	if (!GetOwner())
-	{
-		return;
-	}
-
 	if (!InInputTag.IsValid()) { return; }
 
 	for (const FGameplayAbilitySpec& AbilitySpec : GetActivatableAbilities())
@@ -34,11 +29,6 @@ void UASAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag& InInpu
 
 void UASAbilitySystemComponent::OnAbilityInputReleased(const FGameplayTag& InInputTag)
 {
-	if (!GetOwner())
-	{
-		return;
-	}
-
 	if (!InInputTag.IsValid()) { return; }
 }
 
